@@ -8,11 +8,13 @@ function notify_precio() {
   axios.get('http://www.bna.com.ar/Personas').then(response => {
     let $ = cheerio.load(response.data);
     let precio = $('.table.cotizacion tbody tr').first().find('td').last().text()
-    precio = precio.split(',').join('.')
-    if (parseFloat(precio) != PRECIO) {
-      const str = 'ANT:'+PRECIO+' ACT:'+parseFloat(precio)
+    precio = parseFloat(precio.split(',').join('.'))
+    let str = `${PRECIO ? 'ANTERIOR: ' + PRECIO + '\n' : ''}ACTUAL: ${precio}`
+
+    if (precio !== PRECIO) {
       console.log(str)
-      PRECIO = parseFloat(precio)
+      PRECIO = precio
+
       notifier.notify({
         title: 'Precio Dolar',
         message: str,
