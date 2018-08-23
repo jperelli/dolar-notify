@@ -1,0 +1,31 @@
+{
+  "name": "dolar-notify",
+  "version": "1.0.0",
+  "description": "mostrar desktop notification cuando el precio del dolar cambia en el banco nacion argentino",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "node-notifier": "^5.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jperelli/dolar-notify.git"
+  },
+  "keywords": [
+    "dollar",
+    "price",
+    "forex"
+  ],
+  "author": "Julian Perelli",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jperelli/dolar-notify/issues"
+  },
+  "homepage": "https://github.com/jperelli/dolar-notify#readme"
+}

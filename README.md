@@ -11,7 +11,7 @@ npm install
 ## Ejecutar
 
 ```
-node index.js
+npm start
 ```
 
 
