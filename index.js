@@ -1,3 +1,4 @@
+const path = require('path');
 const notifier = require('node-notifier');
 const axios = require('axios');
 const cheerio = require('cheerio');
@@ -27,6 +28,7 @@ function notify_precio() {
         notifier.notify({
           title: 'Precio Dolar',
           message: str,
+          icon: path.join(__dirname, 'money.png'),
           wait: true,
           closeLabel: 'cerrar',
           time: 2000000
@@ -37,3 +39,13 @@ function notify_precio() {
   });
 }
 notify_precio()
+
+notifier.notify({
+  title: 'Precio Dolar',
+  message: 'Arrancamos',
+  icon: path.join(__dirname, 'money.png'),
+  wait: true,
+  closeLabel: 'cerrar',
+  time: 20000
+});
+
